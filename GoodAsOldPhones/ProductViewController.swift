@@ -13,15 +13,19 @@ class ProductViewController: UIViewController {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
     
-    var productName: String?
+    var product: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
-        productNameLabel.text = productName
-        productImageView.image = #imageLiteral(resourceName: "phone-fullscreen3")
+        if let p = product {
+            productNameLabel.text = p.name
+            
+            if let i = p.productImage {
+                productImageView.image = UIImage(named: i)
+            }
+        }
     }
     
     @IBAction func addToCartPressed(_ sender: Any) -> Void {
