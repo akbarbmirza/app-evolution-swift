@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bzo-2M-KrF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yzl-PF-yEq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,9 +50,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n54-o1-mZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-231.63418290854574"/>
+            <point key="canvasLocation" x="2887.1999999999998" y="-231.63418290854574"/>
         </scene>
-        <!--Contact View Controller-->
+        <!--Contact-->
         <scene sceneID="yi0-qM-5Me">
             <objects>
                 <viewController id="9Lk-RA-aLp" customClass="ContactViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,6 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Contact" image="icon-tabbar-contact" id="Z5a-M4-9Zg"/>
                     <connections>
                         <outlet property="scrollView" destination="J4D-1S-6w0" id="nAU-xo-PjP"/>
                     </connections>
@@ -151,7 +152,36 @@
                     </subviews>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="298" y="-915"/>
+            <point key="canvasLocation" x="1236" y="-1012"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="Vum-dM-ekT">
+            <objects>
+                <tableViewController id="Ulh-1o-mBT" customClass="CartTableViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="24F-jd-IoJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" id="HLq-29-iBU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HLq-29-iBU" id="jO3-uv-1xF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ulh-1o-mBT" id="Qo1-oR-dOp"/>
+                            <outlet property="delegate" destination="Ulh-1o-mBT" id="Bph-j3-Bpe"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Cart" image="icon-tabbar-cart" id="Sd1-So-mU0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-0c-K6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="568"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="urq-Uc-6Ca">
@@ -163,7 +193,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="100" id="nTM-gI-QUb">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nTM-gI-QUb" id="b40-dv-6hc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -183,12 +213,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9v-3i-Xlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="-231.63418290854574"/>
+            <point key="canvasLocation" x="2175.1999999999998" y="-231.63418290854574"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Store-->
         <scene sceneID="TW6-bS-C42">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bzo-2M-KrF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Store" image="icon-tabbar-store" id="Fbp-Ms-SAI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vai-Yz-uuZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -201,6 +232,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHf-1M-Nkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1236" y="-231.63418290854574"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Naz-VG-PJO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yzl-PF-yEq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hZU-l6-jBf">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bzo-2M-KrF" kind="relationship" relationship="viewControllers" id="dvM-hm-KLX"/>
+                        <segue destination="9Lk-RA-aLp" kind="relationship" relationship="viewControllers" id="6QA-AZ-5f2"/>
+                        <segue destination="Ulh-1o-mBT" kind="relationship" relationship="viewControllers" id="I9n-3E-M0h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRr-UR-AR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="296.80000000000001" y="-231.63418290854574"/>
         </scene>
     </scenes>
@@ -210,5 +260,8 @@
         <image name="icon-about-email" width="34" height="34"/>
         <image name="icon-about-phone" width="34" height="34"/>
         <image name="icon-about-website" width="34" height="34"/>
+        <image name="icon-tabbar-cart" width="24" height="19"/>
+        <image name="icon-tabbar-contact" width="29" height="19"/>
+        <image name="icon-tabbar-store" width="34" height="19"/>
     </resources>
 </document>
